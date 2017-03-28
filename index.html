@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+ 
+  
+    <link rel="stylesheet" type="text/css" href="css/framework7.material.colors.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/framework7.material.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/framework7-icons.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <title>Index</title>
+</head>
+
+<body>
+    <!-- coment -->
+    <div class="panel-overlay"></div>
+    <!-- left panel here -->
+    <div class="panel panel-left panel-cover" id="a">
+        <div class="content-block" style="margin: 0px; padding: 0px;">
+            <!-- content panel here -->
+            <div class="head-slidepanel row ">
+                    <!-- bên trái có chứa img -->
+                    <div class="col-50">
+                        <div class="head-slidepanel-content-left" id="user-info">
+                          <!-- noi dung hien thi thong tin user name tai khoan neu da dang nhap -->
+                           <img src='img/icon/ic_person.png'/>
+                            
+                            <span id="dangnhap"></span>
+                           <span id="dangki"></span> 
+                        </div>
+                    </div>
+
+                    <!-- bên phải chỉ chứa logout -->   
+            </div>
+            <div class="list-block left-panel-menu">
+                <ul>
+                    <li class="item-content">
+                        <div class="item-media"><i class="f7-icons size-icon-20 color-icon-panel">home</i> </div>
+                        <div class="item-inner">
+                            <div class="item-title"><span>Trang chủ</span></div>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="item-content">
+                        <div class="item-media" ><i class="f7-icons size-icon-20 color-icon-panel">bell</i></div>
+                        <div class="item-inner">
+                            <div class="item-title"><span>Thông báo</span></div>
+                        </div>
+                    </li>
+                   
+                </ul>
+
+                <ul>
+                    <li class="item-content">
+                        <div class="item-media"><i class="f7-icons size-icon-20 color-icon-panel ">list</i> </div>
+                        <div class="item-inner">
+                            <div class="item-title"><span>Danh mục</span></div>
+                        </div>
+                    </li>
+                   
+                </ul>
+                <ul>
+                    <li class="item-content" >
+                         <div class="item-media"><i class="f7-icons size-icon-20 color-icon-panel ">bag</i> </div>
+                        <div class="item-inner">
+                            <div class="item-title"><span>Shop</span></div>
+                        </div>
+                    </li>
+                </ul>
+                 <ul>
+                    <li class="item-content" >
+                         <div class="item-media"><i class="f7-icons size-icon-20 color-icon-panel ">info</i> </div>
+                        <div class="item-inner">
+                            <div class="item-title"><span>Giới thiệu</span></div>
+                        </div>
+                    </li>
+                </ul>
+                 <ul>
+                    <li class="item-content" >
+                         <div class="item-media"><i class="f7-icons size-icon-20 color-icon-panel ">help</i> </div>
+                        <div class="item-inner">
+                            <div class="item-title"><span>Trợ giúp</span></div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="item-content" >
+                         <div class="item-media"><i class="f7-icons size-icon-20 color-icon-panel ">logout</i> </div>
+                        <div class="item-inner">
+                            <div class="item-title"><span>Đăng xuất</span></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="views">
+        <div class="view view-main">
+            <div data-page="index"  class="page toolbar-fixed navbar-fixed" >
+                    <!-- navbar here -->
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="left" >     
+                            <i class="f7-icons color-icon size-icon-25" id="menu"  style="margin: 5px 0px 0 10px;">bars</i>
+                                <img src="img/handmade-logo.png" class=" img-logo" style="margin: 5px 0 0 10px;" > 
+                            </div>
+
+                            
+                            <div class="right">    
+                                <a id="search"><i class="f7-icons color-icon size-icon-25" style="margin: 5px 10px 0 0;">search</i></a>
+                                <img src="img/icon/cart.png"  class="size-img-25" style="margin: 0px 10px 0 0;">
+                            </div>
+                         </div>   <!-- navbar-inner -->
+                    </div> 
+                    
+                    <!-- toolbar here -->
+                    <div class="toolbar tabbar tabbar-scrollable" >
+                        <div class="toolbar-inner">
+                        <!-- Toolbar links -->
+                            <a class="tab-link active" id="trangchu" href="#tab-1" >Trang chủ</a>
+                            <a class="tab-link " id="khuyenmai" href="#tab-1" >Khuyến mãi</a>
+                            <a class="tab-link" id="tránguc" href="#tab-2">Trang sức</a>
+                            <a class="tab-link" href="#tab-2">Phụ kiện</a>
+                            <a class="tab-link" href="#tab-2">Đồ chơi trẻ em</a>
+                            <a class="tab-link" href="#tab-2">Sản phẩm khác</a>
+                        </div> 
+                    </div>    
+                    <!-- search bar here -->
+                   
+
+                    <!-- page content 1 here -->
+                    <div class="page-content">
+                    <!-- sideshow here -->
+                    <div class="swiper-container slide">
+                      
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/1.png" ></div>
+                            <div class="swiper-slide"><img src="img/2.jpeg" ></div>         
+                        </div>
+                    </div>
+                        <div id="views">
+                            <div class="content-block-title">Khuyến mãi</div>
+                            <div class="content-block">
+                                <div class="row">
+                                        <div class="col-50">
+                                         <img  src="img/12.jpeg">
+
+                                               <div class="product-index-info" > 
+                                                   
+                                                    <div class="product-name"> Giày thủ công thể thao năng động tăng chiều cao</div>
+                                                    
+                                                    <span><b>200.000đ</b></span>                           
+                                                    <i class="f7-icons size-icon-20"> bag </i>
+                                                </div>
+
+                                        </div>
+                                              
+                                        
+
+                                        <div class="col-50">
+                                         <img src="img/2.jpeg" >
+                                              <div class="product-index-info" >
+                                                
+                                              
+                                                    <span>Giày thủ công thể thao năng động</span>
+                                                    <br>
+                                                    <span><b>200.000đ</b></span>
+                                                     <i class="f7-icons size-icon-20"> bag </i>
+                                               </div>
+                                        </div>
+                                    
+                                 
+                                         <div class="col-50">
+                                            <div class="product-index-info" >
+                                               <img  src="img/1.png" >
+                                          
+                                                    <span>Giày thủ công</span>
+                                                    <br>
+                                                     <span><b>200.000đ</b></span>
+                                                    <i class="f7-icons size-icon-20"> bag </i>
+
+                                               </div>
+                                        </div>
+
+                                         <div class="col-50">
+                                            <img   src="img/aki.png" >
+                                            <div class="product-index-info"  >
+                                                    <span>Giày thủ công</span>
+                                                    <br>
+                                                   <span><b>200.000đ</b></span>
+                                                    <i class="f7-icons size-icon-20"> bag </i>
+                                               </div>
+
+                                        </div>
+
+                                </div>
+                            </div>
+                             <!-- page content 2 here -->
+                        
+                            <div class="content-block-title">Đề cử</div>
+                            <div class="content-block">
+                                <div class="row">
+                                        <div class="col-50">
+                                               <div> 
+                                                    <img  src="img/12.jpeg"> 
+                                               
+                                                    <span>Giày thủ công</span>
+                                                    <br>
+                                                    <b>200.000đ</b>
+                                               </div>
+                                        </div>
+
+                                        <div class="col-50">
+                                              <div>
+                                                 <img src="img/2.jpeg" >
+                                            
+                                                    <span>Giày thủ công</span>
+                                                    <br>
+                                                    <b>200.000đ</b>
+                                               </div>
+                                        </div>
+                                    
+                                 
+                                         <div class="col-50">
+                                            <div>
+                                               <img  src="img/1.png" >
+                                          
+                                                    <span>Giày thủ công</span>
+                                                    <br>
+                                                    <b>200.000đ</b>
+                                               </div>
+                                        </div>
+
+                                         <div class="col-50">
+                                            <div>
+                                                <img   src="img/aki.png" >
+                                          
+                                                    <span>Giày thủ công</span>
+                                                    <br>
+                                                    <b>200.000đ</b>
+                                               </div>
+
+                                        </div>
+
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+            </div> <!-- page -->
+        </div> <!-- view-main -->
+    </div>  <!-- views -->
+
+     <!-- login creen here -->
+    <div class="popup login-screen">
+        <div class="view ">
+            <div class="page">
+                <div class="page-content login-screen-content">
+                    <div class="head-login-screen">
+                        <div class="left ">
+                            <i class="f7-icons color-icon-black size-icon-25 " id="close-login"  style="padding: 10px 10px 0px 20px;">close</i>  
+                            <span class="size-title">Login</span>
+                        </div>
+                    </div>
+
+                    <form>
+                        <div class="list-block">
+                            <ul>
+                              <li class="item-content">
+                                <div class="item-inner">
+                                  <div class="item-title label login-title"><i class="f7-icons">persons</i></div>
+                                  <div class="item-input">
+                                    <input type="text" name="username" placeholder="Username"/>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="item-content">
+                                <div class="item-inner">
+                                  <div class="item-title label login-title"><i class="f7-icons ">lock</i></div>
+                                  <div class="item-input">
+                                    <input type="password" name="password" placeholder="Password"/>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                        </div>
+
+                        <div class="list-block" >
+                           
+                                <li class="item-content"> <a href="#" class="button button-big button-login ">Đăng Nhập</a></li>
+                           
+                            </br>
+                              <span style="padding-left: 5%; color:  #9225a7; ">Đăng Kí</span>
+                            <div style="margin-top: 15px"></div>
+                            <span style="padding-left: 5%; color:  #9225a7;">Quên mật khẩu</span>
+                        </div>
+                      
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- search pop up here -->
+    <div class="popup popup-search">
+         <div class="views">
+            <div class="view view-main">
+                <div data-page="index"  class="page  navbar-fixed" >
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="left">
+                               <a href="index.html"><i class="f7-icons color-icon size-icon-30" id="search-back"  style="margin: 5px 0px 0 10px;">left</i></a>
+                            </div>
+                            <form class="searchbar searchbar-init" id="form-search">
+                                <div class="searchbar-input">
+                                    <input type="search" placeholder="Search" id="search">
+                                    <a href="#" class="searchbar-clear"></a>
+                                </div>
+                            </form>
+                            <div class="searchbar-overlay"></div>                              
+                        </div>
+                    </div>
+
+                    <div class="page-content" id="content">
+                            <!-- search bar content here -->
+                        <div class="content-block searchbar-not-found">
+                            <div class="content-block-inner">
+                                Nothing found
+                            </div>
+                        </div>
+                        <div class="list-block list-block-search searchbar-found">
+                            <ul>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">
+                                            Item1
+                                        </div>                                    
+                                    </div>
+                                </li>
+
+                                 <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">
+                                            Item2
+                                        </div>                                    
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+
+   <div class="popup  signup ">
+       <div class="view ">
+            <div class="page">
+                 <div class="page-content signup-content">
+                    <div class="head-signup">
+                        <div class="left ">
+                            <i class="f7-icons color-icon-black size-icon-25 " id="close-signup"  style="padding: 10px 10px 0px 20px;">close</i>  
+                            <span class="size-title">Sign up</span>
+                        </div>
+                    </div>
+                    <form >
+                        <div class="list-block">
+                        
+                           <li class="item-content">
+                                <div class="item-inner">
+                                  <div class="item-title label login-title"><i class="f7-icons">compose</i></div>
+                                  <div class="item-input">
+                                    <input type="text" name="holot" placeholder="Họ Lót"/>
+                                  </div>
+                                </div>
+                            </li>
+                            <li class="item-content">
+                                <div class="item-inner">
+                                  <div class="item-title label login-title"><i class="f7-icons">compose</i></div>
+                                  <div class="item-input">
+                                    <input type="text" name="ten" placeholder="Tên"/>
+                                  </div>
+                                </div>
+                              </li>
+                            <li class="item-content">
+                                <div class="item-inner">
+                                  <div class="item-title label login-title"><i class="f7-icons">today</i></div>
+                                  <div class="item-input">
+                                    <input type="text" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" id="ngaysinh" name="ngaysinh" placeholder="Ngày sinh" />
+                                  </div>
+                                </div>
+                            </li>
+                            <li class="item-content">
+                                <div class="item-inner">
+                                  <div class="item-title label login-title"><i class="f7-icons">bookmark</i></div>
+                                  <div class="item-input">
+                                    <input type="text" name="diachi" placeholder="Địa chỉ"/>
+                                  </div>
+                                </div>
+                            </li>
+                            <li class="item-content">
+                                <div class="item-inner">
+                                  <div class="item-title label login-title"><i class="f7-icons">phone</i></div>
+                                  <div class="item-input">
+                                    <input type="number" name="sodt" placeholder="Số điện thoại"/>
+                                  </div>
+                                </div>
+                            </li>
+                            <li class="item-content">
+                                <div class="item-inner">
+                                  <div class="item-title label login-title"><i class="f7-icons">email</i></div>
+                                  <div class="item-input">
+                                    <input type="text" name="username" placeholder="Email"/>
+                                  </div>
+                                </div>
+                            </li>
+                            <li class="item-content">
+                                <div class="item-inner">
+                                  <div class="item-title label login-title"><i class="f7-icons">persons</i></div>
+                                  <div class="item-input">
+                                    <input type="text" name="username" placeholder="Tài khoản"/>
+                                  </div>
+                                </div>
+                            </li>
+                            <li class="item-content">
+                                <div class="item-inner">
+                                  <div class="item-title label login-title"><i class="f7-icons">lock</i></div>
+                                  <div class="item-input">
+                                    <input type="password" name="password" placeholder="Mật khẩu"/>
+                                  </div>
+                                </div>
+                            </li>
+
+                        </div>
+                    
+                        <div class="list-block" >
+                               <li class="item-content">
+                                     <a  class="button button-big button-sigup ">Đăng kí</a>
+                                </li>
+                                <br>
+                                <span style="padding-left: 5%;  color:  #9225a7;">Đăng nhập</span>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+   </div>
+   
+<script>
+
+    var myApp = new Framework7(); 
+    
+    // 1 Slide Per View, 50px Between
+    var mySwiper1 = myApp.swiper('.slide', {
+      pagination:'.slide .swiper-pagination',
+      spaceBetween: 0, speed: 600
+    });  
+
+    var $$ = Dom7;
+
+    var isLogin = false;
+    //load
+    
+    //document.getElementById("ngaysinh").valueAsDate = new Date();
+
+    if(isLogin == false)
+    {
+
+        document.getElementById('dangnhap').innerHTML = "Đăng Nhập";
+         document.getElementById('dangki').innerHTML = "Đăng Kí";
+    }
+    else
+    {
+        document.getElementById('dangnhap').innerHTML = "Your Name";
+         document.getElementById('dangki').innerHTML = "User Name";
+    }
+    
+    //login
+    $$('#dangnhap').on('click', function(){
+        myApp.loginScreen();
+        
+    });
+   
+     $$('#close-login').on('click', function(){
+        myApp.closeModal();
+
+    });
+     //sign up
+
+     $$('#dangki').on('click', function(){
+        myApp.popup('.signup');
+     });
+
+     $$('#close-signup').on('click', function(){
+        myApp.closeModal();
+
+    });
+    
+     //panel
+    $$('#menu').on('click',function(e)
+    {
+        myApp.openPanel('left');
+    });
+
+    $$('#close').on('click', function(e){
+        myApp.closePanel();
+    });
+
+  //searh
+    $$('#search').on('click' , function(e){
+        myApp.popup('.popup-search');
+    });
+
+    $$('#search-back').on('click' , function(){
+            myApp.closeModal();
+    });
+    var mySearchbar = myApp.searchbar('.searchbar', {
+        searchList: '.list-block-search',
+        searchIn: '.item-title'
+    }); 
+
+    //index
+   $$('#trangchu').on('click' , function(){
+        window.location.href = "index.html";
+    });
+
+    $$('#khuyenmai').on('click' , function(){
+        document.getElementById("views").innerHTML = "sản phẩm khuyến mãi";
+    });
+</script>
+  
+   
+
+</body>
+
+</html>

@@ -55,13 +55,20 @@
   }
  .size-icon-25 {
 
-		font-size: 25px;
+		font-size: 23px;
+  }
+ .size-icon-23 {
+
+		font-size: 23px;
   }
    .size-icon-30 {
 
 		font-size: 30px;
   }
- 
+  .size-icon-35 {
+
+		font-size: 35px;
+  }
   .size-img-25
   {
   	width: 25px ;
@@ -286,7 +293,9 @@
 .head-signup
 {
 	margin-bottom: 60px;
-	
+	background-color: #9225a7 ;
+	color: #fff;
+	padding-bottom: 10px;
 }
 
 .signup-content .list-block .item-content
@@ -309,4 +318,97 @@
 .button-signup li
 {
 	padding-left: 5%;
+}
+
+/*css sanpham.html*/
+
+
+.sanpham-toolbar
+{
+	background-color: #efd4f7;
+	border-bottom: 1px solid;
+	border-color: #cc6ddf;
+}
+.views-sanpham
+{
+	background-color: #f2f2f2;
+}
+.sanpham-info
+{
+	/*border-top: 1px solid;*/
+	border-bottom: 1px solid;
+	border-color: #cc6ddf;
+	text-align: center;
+	background-color: #fff;
+	
+}
+.sanpham-info-left
+{
+	width: 25%;
+	height: 70%;
+	padding: 2% 2% 2% 2%;
+	 display:inline-block;
+	 
+}
+.sanpham-info-left img
+{
+	max-width: 90%;
+	max-height:100%;
+	line-height: 100%;
+	object-fit: contain;
+	vertical-align: middle;
+}
+.sanpham-info-center
+{
+	width: auto;
+	height: 50%;
+	text-align: center;
+	padding: 2% 2% 2% 2%;
+	 display:inline-block;
+	 vertical-align: middle;
+	 
+}
+.sanpham-info-center span,p
+{
+	width: 100%;
+	height: 100%;
+	font-size: 16px;
+	padding: 0px;
+	margin: 0px;
+	display: inline;
+}
+
+.sanpham-info-right
+{
+	width: 30%;
+	height: 50%;
+	text-align: center;
+	padding: 2% 2% 2% 2%;
+	display:inline-block;
+	vertical-align: middle;
+	
+	
+}
+.sanpham-info-right span,p
+{
+	width: 100%;
+	height: 100%;
+	font-size: 16px;
+	padding: 0px;
+	margin: 0px;
+	
+}
+.sanpham-info-right p,i
+{
+	color:#d63b2f;
+
+	
+}
+.sanpham-info-right span
+{
+	color: #a923a3;
+}
+.sanpham-check
+{
+	display:inline-block;
 }

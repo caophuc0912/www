@@ -39,7 +39,12 @@
                         </div>
                     </div>
 
-                    <!-- bên phải chỉ chứa logout -->   
+                    <!-- bên phải chỉ chứa edit pro5 --> 
+                     <div class="col-50">
+                        <div class="head-slidepanel-content-right" >
+                            <i class="f7-icons color-icon size-icon-25" id="user-edit" style="padding: 10% 0% 0% 70% ; ">compose</i>
+                        </div>
+                    </div>
             </div>
             <div class="list-block left-panel-menu">
                 <ul>
@@ -71,7 +76,7 @@
                    
                 </ul>
                 <ul>
-                    <li class="item-content" >
+                    <li class="item-content" id="shop" >
                          <div class="item-media"><i class="f7-icons size-icon-20 color-icon-panel ">bag</i> </div>
                         <div class="item-inner">
                             <div class="item-title"><span>Shop</span></div>
@@ -113,7 +118,7 @@
                     <div class="navbar">
                         <div class="navbar-inner">
                             <div class="left" >     
-                            <i class="f7-icons color-icon size-icon-25" id="menu"  style="margin: 5px 0px 0 10px;">bars</i>
+                            <i class="f7-icons color-icon size-icon-30" id="menu"  style="margin: 5px 0px 0 10px;">bars</i>
                                 <img src="img/handmade-logo.png" class=" img-logo" style="margin: 5px 0 0 10px;" > 
                             </div>
 
@@ -136,10 +141,7 @@
                             <a class="tab-link" href="#tab-2">Đồ chơi trẻ em</a>
                             <a class="tab-link" href="#tab-2">Sản phẩm khác</a>
                         </div> 
-                    </div>    
-                    <!-- search bar here -->
-                   
-
+                    </div>  
                     <!-- page content 1 here -->
                     <div class="page-content">
                     <!-- sideshow here -->
@@ -149,6 +151,7 @@
                             <div class="swiper-slide"><img src="img/1.png" ></div>
                             <div class="swiper-slide"><img src="img/2.jpeg" ></div>         
                         </div>
+                    <!-- content -->
                     </div>
                         <div id="views">
                             <div class="content-block-title">Khuyến mãi</div>
@@ -368,8 +371,8 @@
             <div class="page">
                  <div class="page-content signup-content">
                     <div class="head-signup">
-                        <div class="left ">
-                            <i class="f7-icons color-icon-black size-icon-25 " id="close-signup"  style="padding: 10px 10px 0px 20px;">close</i>  
+                        <div class="left " >
+                            <i class="f7-icons color-icon size-icon-25 " id="close-signup"  style="padding: 10px 10px 0px 20px;">close</i>  
                             <span class="size-title">Sign up</span>
                         </div>
                     </div>
@@ -396,15 +399,15 @@
                                 <div class="item-inner">
                                   <div class="item-title label login-title"><i class="f7-icons">today</i></div>
                                   <div class="item-input">
-                                    <input type="text" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" id="ngaysinh" name="ngaysinh" placeholder="Ngày sinh" />
+                                    <input type="text" id="ngaysinh" name="ngaysinh" placeholder="Ngày sinh" />
                                   </div>
                                 </div>
                             </li>
-                            <li class="item-content">
-                                <div class="item-inner">
+                            <li class="item-content" >
+                                <div class="item-inner" >
                                   <div class="item-title label login-title"><i class="f7-icons">bookmark</i></div>
                                   <div class="item-input">
-                                    <input type="text" name="diachi" placeholder="Địa chỉ"/>
+                                   <input type="text" name="diachi" placeholder="Địa chỉ"/>
                                   </div>
                                 </div>
                             </li>
@@ -440,6 +443,14 @@
                                   </div>
                                 </div>
                             </li>
+                            <li class="item-content">
+                                <div class="item-inner">
+                                  <div class="item-title label login-title"><i class="f7-icons">lock</i></div>
+                                  <div class="item-input">
+                                    <input type="password" name="password" placeholder="Xác nhận mật khẩu"/>
+                                  </div>
+                                </div>
+                            </li>
 
                         </div>
                     
@@ -449,6 +460,8 @@
                                 </li>
                                 <br>
                                 <span style="padding-left: 5%;  color:  #9225a7;">Đăng nhập</span>
+                                <div style="margin-top: 15px"></div>
+                                <span style="padding-left: 5%; color:  #9225a7;">Tôi đã có tài khoản!</span>
                         </div>
                         
                     </form>
@@ -470,8 +483,11 @@
     var $$ = Dom7;
 
     var isLogin = false;
+        
     //load
-    
+    var calendarDefault = myApp.calendar({
+    input: '#ngaysinh',
+    });     
     //document.getElementById("ngaysinh").valueAsDate = new Date();
 
     if(isLogin == false)
@@ -479,11 +495,19 @@
 
         document.getElementById('dangnhap').innerHTML = "Đăng Nhập";
          document.getElementById('dangki').innerHTML = "Đăng Kí";
+         $$("#user-edit").on('click', function()
+         {
+            myApp.loginScreen();
+         });
     }
     else
     {
         document.getElementById('dangnhap').innerHTML = "Your Name";
          document.getElementById('dangki').innerHTML = "User Name";
+         $$("#user-edit").on('click', function()
+         {
+            alert('chuyển đến trang edit pro5');
+         });
     }
     
     //login
@@ -537,6 +561,12 @@
 
     $$('#khuyenmai').on('click' , function(){
         document.getElementById("views").innerHTML = "sản phẩm khuyến mãi";
+    });
+
+    //shop click
+
+    $$("#shop").on('click', function(){
+        window.location.href = "sanpham.html";
     });
 </script>
   

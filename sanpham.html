@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+ 
+  
+    <link rel="stylesheet" type="text/css" href="css/framework7.material.colors.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/framework7.material.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/framework7-icons.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <title>Sản phẩm</title>
+</head>
+<body>
+    <div class="panel-overlay"></div>
+    <!-- left panel here -->
+    <div class="panel panel-left panel-cover" id="a">
+        <div class="content-block" style="margin: 0px; padding: 0px;">
+            <!-- content panel here -->
+            <div class="head-slidepanel row ">
+                    <!-- bên trái có chứa img -->
+                    <div class="col-50">
+                        <div class="head-slidepanel-content-left" id="user-info">
+                          <!-- noi dung hien thi thong tin user name tai khoan neu da dang nhap -->
+                           <img src='img/icon/ic_person.png'/>
+                            
+                            <span id="dangnhap"></span>
+                           <span id="dangki"></span> 
+                        </div>
+                    </div>
+
+                    <!-- bên phải chỉ chứa edit pro5 --> 
+                     <div class="col-50">
+                        <div class="head-slidepanel-content-right" >
+                            <i class="f7-icons color-icon size-icon-25" id="user-edit" style="padding: 10% 0% 0% 70% ; ">compose</i>
+                        </div>
+                    </div>
+            </div>
+            <div class="list-block left-panel-menu">
+                <ul>
+                    <li class="item-content">
+                        <div class="item-media"><i class="f7-icons size-icon-20 color-icon-panel">list</i> </div>
+                        <div class="item-inner">
+                            <div class="item-title"><span>Đơn hàng</span></div>
+                        </div>
+                    </li>
+                </ul>
+
+               
+
+                <ul>
+                    <li class="item-content">
+                        <div class="item-media"><i class="f7-icons size-icon-20 color-icon-panel ">box</i> </div>
+                        <div class="item-inner">
+                            <div class="item-title"><span>Sản phẩm</span></div>
+                        </div>
+                    </li>
+                   
+                </ul>
+                <ul>
+                    <li class="item-content" >
+                         <div class="item-media"><i class="f7-icons size-icon-20 color-icon-panel ">document</i> </div>
+                        <div class="item-inner">
+                            <div class="item-title"><span>Thông tin Shop</span></div>
+                        </div>
+                    </li>
+                </ul>
+                 <ul>
+                    <li class="item-content" >
+                         <div class="item-media"><i class="f7-icons size-icon-20 color-icon-panel ">info</i> </div>
+                        <div class="item-inner">
+                            <div class="item-title"><span>Giới thiệu</span></div>
+                        </div>
+                    </li>
+                </ul>
+                 <ul>
+                    <li class="item-content" >
+                         <div class="item-media"><i class="f7-icons size-icon-20 color-icon-panel ">help</i> </div>
+                        <div class="item-inner">
+                            <div class="item-title"><span>Trợ giúp</span></div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="item-content" >
+                         <div class="item-media"><i class="f7-icons size-icon-20 color-icon-panel ">logout</i> </div>
+                        <div class="item-inner">
+                            <div class="item-title"><span>Đăng xuất</span></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="views">
+        <div class="view view-main">
+            <div data-page="index"  class="page toolbar-fixed navbar-fixed" >
+                    <!-- navbar here -->
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left" style="text-align: center;">     
+                            <i class="f7-icons color-icon size-icon-30" id="menu"  style="margin: 0px 0px 0 10px;">bars</i>
+                           
+                        </div>
+                        <div class="right" style="text-align: center;">
+                            <i class="f7-icons color-icon size-icon-23" id="search" style="margin: 0px 10px 0 0;">search</i>
+                            <i class="f7-icons color-icon size-icon-30" id='add' style="margin: 0px 20px 0 10px;">add</i>
+                        </div>
+                     </div>   <!-- navbar-inner -->
+                </div> 
+                
+                <!-- toolbar here -->
+                <div class="toolbar sanpham-toolbar"  style="background-color: #f2f2f2; color: #990099;" >
+                    <div class="toolbar-inner" >
+                     <!-- Toolbar links -->
+                     
+                        <div class="left" style=" text-transform: none; padding-left: 5%;">
+                          Tổng số: 100
+                       </div>
+                        
+                        <div class="center" >
+                            |
+                        </div>
+                     
+                     
+                         <div class="right" style=" padding-right: 5%;">
+                           <div class="item-input" >
+                               <i class="f7-icons size-icon-25" style="color:  #990099;">sort_fill</i>
+                                <select style="height: 23px; border: 0px; color: #990099; background-color: #f2f2f2">
+                                         <option>--sắp xếp--</option>
+                                        <option>Tất cả sản phẩm</option>
+                                        <option>Sản phẩm mới</option>
+                                        <option>Theo ngày đăng</option>
+                                </select>
+                               </div>
+                          
+                       
+
+                     </div>
+                       
+                       
+                    </div>
+                </div>  
+                <!-- page content 1 here -->
+                <div class="page-content ">
+                  
+                    <!-- content -->
+                    <div id="views ">
+                        <div class="sanpham-info">
+                             <div class="left sanpham-info-left">
+                                 <img src="img/1.png">
+                             </div>
+                            <div class="center sanpham-info-center">
+                                <span>Giày thủ công</span> 
+                                <br>
+                                <div class="item-title label sanpham-check"></div>
+                                <label class="label-switch sanpham-check">
+                                  <input type="checkbox">
+                                  <div class="checkbox"></div>
+                                </label>
+                            </div>
+                            <div class="right sanpham-info-right">
+                                 <span>Còn:10</span>
+                                  <br>
+                                <p>200.000đ</p>
+                            </div>
+                         </div>
+
+                         <div class="sanpham-info">
+                             <div class="left sanpham-info-left">
+                                 <img src="img/12.jpeg">
+                             </div>
+                            <div class="center sanpham-info-center">
+                                <span>Giày thủ công</span> 
+                                <br>
+                                <div class="item-title label sanpham-check"></div>
+                                <label class="label-switch sanpham-check">
+                                  <input type="checkbox">
+                                  <div class="checkbox"></div>
+                                </label>
+                            </div>
+                            <div class="right sanpham-info-right">
+                                 <span>Còn :1000</span>
+                                  <br>
+                                <p>200.000.000đ</p>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div> <!-- page -->
+        </div> <!-- view-main -->
+    </div>  <!-- views -->
+
+
+
+    <!-- search bar popup -->
+    <div class="popup popup-search">
+         <div class="views">
+            <div class="view view-main">
+                <div data-page="index"  class="page  navbar-fixed" >
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="left">
+                               <a href="index.html"><i class="f7-icons color-icon size-icon-30" id="search-back"  style="margin: 5px 0px 0 10px;">left</i></a>
+                            </div>
+                            <form class="searchbar searchbar-init" id="form-search">
+                                <div class="searchbar-input">
+                                    <input type="search" placeholder="Nhập tên sản phẩm" id="search">
+                                    <a href="#" class="searchbar-clear"></a>
+                                </div>
+                            </form>
+                            <div class="searchbar-overlay"></div>                              
+                        </div>
+                    </div>
+
+                    <div class="page-content" id="content">
+                            <!-- search bar content here -->
+                        <div class="content-block searchbar-not-found">
+                            <div class="content-block-inner">
+                                Nothing found
+                            </div>
+                        </div>
+                        <div class="list-block list-block-search searchbar-found">
+                            <ul>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">
+                                            Item1
+                                        </div>                                    
+                                    </div>
+                                </li>
+
+                                 <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">
+                                            Item2
+                                        </div>                                    
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script type="text/javascript">
+        
+        var myApp = new Framework7(); 
+    
+    // 1 Slide Per View, 50px Between
+        var mySwiper1 = myApp.swiper('.slide', {
+          pagination:'.slide .swiper-pagination',
+          spaceBetween: 0, speed: 600
+        });  
+
+        var $$ = Dom7;
+
+        var isLogin = false;
+            
+        //load
+
+        if(isLogin == false)
+        {
+
+            document.getElementById('dangnhap').innerHTML = "Đăng Nhập";
+             document.getElementById('dangki').innerHTML = "Tạo shop";
+             $$("#user-edit").on('click', function()
+             {
+                myApp.loginScreen();
+             });
+        }
+        else
+        {
+            document.getElementById('dangnhap').innerHTML = "Your Shop";
+             document.getElementById('dangki').innerHTML = "User Name";
+             $$("#user-edit").on('click', function()
+             {
+                alert('chuyển đến trang edit pro5');
+             });
+        }
+    
+        //panel
+        $$('#menu').on('click',function(e)
+        {
+            myApp.openPanel('left');
+        });
+
+        $$('#close').on('click', function(e){
+            myApp.closePanel();
+        });
+        //search
+         $$('#search').on('click' , function(e){
+            myApp.popup('.popup-search',false,false);
+         });
+
+        $$('#search-back').on('click' , function(){
+            myApp.closeModal();
+        });
+        var mySearchbar = myApp.searchbar('.searchbar', {
+            searchList: '.list-block-search',
+            searchIn: '.item-title'
+        }); 
+       
+
+    </script>
+</body>
